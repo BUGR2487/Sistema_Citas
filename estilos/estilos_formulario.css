@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+.contenedor {
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.11);
+    box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.11);
+}
+
+img {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+h1 {
+    background-color: #EFEFEF;
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 25px;
+    color: #FFFFFF;
+    box-shadow: -5px 0px #347FE1;
+    color: #347FE1;
+}
+
+h2 {
+    background-color: #F7FCFE;
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 25px;
+    color: #333333;
+    box-shadow: -5px 0px teal;
+}
+
+.texto {
+    margin: 20px;
+    color: #333333;
+}
+
+label {
+    font-size: 16px;
+}
+
+input[type=text], input[type=number], input[type=tel], input[type=date], input[type=email], select {
+    padding: 15px 28px;
+    font-size: 16px;
+    border-radius: 4px;
+    display:inline-block;
+    margin-top: 5px;
+    border: 1px solid #A3A3A3;
+}
+
+input[type=date] {
+    padding-right: 44px;
+}
+
+select {
+    padding-right: 140px;
+}
+
+input:focus, input[type]:focus {
+    border-color: rgb(52, 127, 225);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(52, 127, 225, 1);
+    outline: 0 none;
+}
+
+div {
+    margin: 20px;
+    margin-left: 55px;
+}
+
+#datos-personales, #domicilio, #datos-contacto, #datos-cita {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.cabecera {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98.3%;
+}
+
+.asterisco {
+    color: red;
+}
+
+/*** Boton y Enlace ***/
+input[type="submit"], a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px 29px;
+    background: #347FE1;
+    border: 2px solid;
+    border-color: #347FE1;
+    margin: 10px 0px 30px 55px;
+}
+
+input[type="submit"]:hover, a:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+a {
+    color: rgba(255, 255, 255, 1) !important;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 42px;
+    margin-bottom: 7px;
+}
