@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="estilos/estilos_formulario.css">
         <link rel="shortcut icon" href="../imagenes/logo_cetac.png">
         <title> Sistema de citas - CETAC 01 </title>
+        <?php $mysqli = new mysqli("localhost", "root", "", "CitasCETAC");
+            if ($mysqli->connect_errno) {
+                echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+            }
+            ?>
     </head>
 
     <body>
@@ -19,7 +24,7 @@
                     </div>
                 </section>
                 <br>
-                <form method="POST" name="FrmPrincipal" action="#">
+                <form method="POST" name="FrmPrincipal" action="baseDeDatos.php">
                     <h1>Sistema de citas - CETAC 01</h1>
                     <label class="texto"> Los campos marcados con (<label class="asterisco">*</label>) es información requerida. </label>    
 
@@ -131,7 +136,16 @@
                     <section id="datos-cita">
                         <div>
                             <label> Asunto de la cita </label> <label class="asterisco">*</label> <br>
-                            <input type="text" name="TxtAsunto" required> <br>
+                            <?php 
+                            $asusntos = $mysqli->query("SELECT id, nombre FROM asunto ORDER BY nombre ASC");?>
+                            <select name="asunto">
+                                <?php 
+                                    while($fila = $asusntos->fetch_assoc()){
+                                        echo "<option value=".$fila['id'].">".$fila['nombre']."</option>";
+                                    }
+                                ?>
+                            </select>
+                                 <br>
                         </div>
 
                         <div>
@@ -141,34 +155,34 @@
                         
                         <div>
                             <label> Hora de la cita </label> <label class="asterisco">*</label> <br>
-                            <select name="select">
-                                <option value="value1" selected>8:00</option>
-                                <option value="value2">8:30</option>
-                                <option value="value3">9:00</option>
-                                <option value="value4">9:30</option>
-                                <option value="value5">10:00</option>
-                                <option value="value6">10:30</option>
-                                <option value="value7">11:00</option>
-                                <option value="value8">11:30</option>
-                                <option value="value9">12:00</option>
-                                <option value="value10">12:30</option>
-                                <option value="value11">13:30</option>
-                                <option value="value12">14:30</option>
-                                <option value="value13">15:00</option>
-                                <option value="value14">15:30</option>
-                                <option value="value15">16:00</option>
-                                <option value="value16">16:30</option>
-                                <option value="value17">17:00</option>
-                                <option value="value18">17:30</option>
-                                <option value="value19">18:00</option>
-                                <option value="value20">18:30</option>
+                            <select name="hora">
+                                <option value="8:00" selected>8:00</option>
+                                <option value="8:30">8:30</option>
+                                <option value="9:00">9:00</option>
+                                <option value="9:30">9:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
                               </select>
                         </div>
                     </section>
 
                     <input class="button" type="submit" value="Agendar Cita" onclick="mensajeConfirmacion()">
 
-                    <script>
+                    <!-- <script>
                         function mensajeConfirmacion() {
                             alert("Cita registrada correctamente.");
                             document.getElementById('FrmPrincipal').reset();
@@ -177,7 +191,7 @@
                         function citaOcupada() {
                             alert("Lo sentimos, ese horario ya ha sido agendado.");
                         }
-                    </script>
+                    </script> -->
 
                 </form>
             </div>
