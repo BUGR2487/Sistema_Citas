@@ -112,8 +112,8 @@
                         </div>
 
                         <div>
-                            <label> Correo Electrónico (alterno) </label> <label class="asterisco">*</label> <br>
-                            <input type="email" name="TxtCorreoElectronicoAlterno" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required> <br>
+                            <label> Correo Electrónico (alterno) </label>  <br>
+                            <input type="email" name="TxtCorreoElectronicoAlterno" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"> <br>
                         </div>
 
                         <div>
@@ -127,8 +127,8 @@
                         </div>  
 
                         <div>
-                            <label> Tel. Oficina (con clave LADA) </label> <label class="asterisco">*</label> <br>
-                            <input type="tel" name="TxtTelefonoOficina" required> <br>
+                            <label> Tel. Oficina (con clave LADA) </label> <br>
+                            <input type="tel" name="TxtTelefonoOficina"> <br>
                         </div>
                     </section>
 

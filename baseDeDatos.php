@@ -1,4 +1,8 @@
 <?php 
+/* Aquí se generán las consultas y el alta de los estudiantes y citas
+Revisa si existe alguna cita con las mismas características
+Depués revisa si existe un estuiante o persona con el mismo nombre y fecha de nacimiento para no repetir la información
+Después da de alta la cita o le avisa al usuario que no esta disponible ese día. */
             $mysqli = new mysqli("localhost", "root", "", "CitasCETAC");
             if ($mysqli->connect_errno) {
                 echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
@@ -50,5 +54,6 @@
                         alert("Cita registrada correctamente.");
                     </script>';
             } 
-
+            header("Location: index.php");
+            die();
         ?>
