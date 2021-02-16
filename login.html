@@ -15,20 +15,22 @@
                     <div class="app-title">
                         <h1>CETAC - 01</h1>
                     </div>
-        
-                    <div class="login-form">
-                        <div class="control-group">
-                        <input type="text" class="login-field" value="" placeholder="Correo Electrónico" id="TxtCorreoElectronico">
-                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    <form method="POST" name="FrmSesion" action="sesion.php">
+                        <div class="login-form">
+                            <div class="control-group">
+                            <input type="text" class="login-field" value="" placeholder="Correo Electrónico" name="TxtCorreoElectronico">
+                            <label class="login-field-icon fui-user" for="login-name"></label>
+                            </div>
+            
+                            <div class="control-group">
+                            <input type="password" class="login-field" value="" placeholder="Contraseña" name="TxtContrasena">
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+                            </div>
+                            <div>
+                            <input class="button" type="submit" value="Iniciar Sesión" >
+                            </div>
                         </div>
-        
-                        <div class="control-group">
-                        <input type="password" class="login-field" value="" placeholder="Contraseña" id="TxtContrasena">
-                        <label class="login-field-icon fui-lock" for="login-pass"></label>
-                        </div>
-        
-                        <a class="btn btn-primary btn-large btn-block" href="#">Iniciar Sesión</a>
-                    </div>
+                    </form>
                 </div>
             </div>
         </body>

@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(!$_SESSION["autorizado"]){
+        header("Location: login.html");
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,12 +30,12 @@
                 <section id="cabecera">
                     <div class="cabecera">
                         <img src="../imagenes/logo_cetac.png" alt="">
-                        <a href="index.php"> Cerrar sesión </a>
+                        <a href="cerrar.php"> Cerrar sesión </a>
                     </div>
                 </section>
                 <br>
                 <!-- Este formulario debe de mandar los datos por método POST a usuario.php dónde se da de alta a los usuairos nuevos -->
-                <form method="POST" name="FrmUsuario" action="usuario.php">
+                <!-- <form method="POST" name="FrmUsuario" action="usuario.php">
                     <h1>Sistema de citas - CETAC 01</h1>
                     <label class="texto"> Los campos marcados con (<label class="asterisco">*</label>) es información requerida. </label>    
 
@@ -51,7 +57,7 @@
                         </div>
                     </section>
                     <input class="button" type="submit" value="Agregar Usuario" >
-                </form>
+                </form> -->
                 <!-- Este formulario es para dar de alta los asuntos que la escuela quiere que les muestra a los estudiantes para registrarse -->
                 <form method="POST" name="FrmAsunto" action="asunto.php">  
                     <h2>Nuevo asunto</h2>

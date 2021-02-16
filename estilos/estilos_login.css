@@ -40,7 +40,18 @@ body {
     margin-bottom: 10px;
 }
     
-input {
+input[type="submit"], a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px 29px;
+    background: #347FE1;
+    border: 2px solid;
+    border-color: #347FE1;
+    margin: 10px 0px 30px 55px;
+}
+
+input[type="text"], input[type="password"] {
     text-align: center;
     background-color: #ECF0F1;
     border: 2px solid transparent;
