@@ -12,6 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilos/estilos_formulario.css">
+        <link rel="stylesheet" href="estilo_tabla.css">
         <link rel="shortcut icon" href="../imagenes/logo_cetac.png">
         <title> Sistema de citas - CETAC 01 </title>
         <?php $mysqli = new mysqli("localhost", "root", "", "CitasCETAC");
